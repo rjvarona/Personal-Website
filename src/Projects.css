@@ -30,12 +30,12 @@
 .inventory{
     /* min-width: 57ch; */
     min-height: 50ch;
-    width: 80%;
+    width: 100%;
     height: 100%;
     max-width: 1000ch;
     max-height: 1000ch;
     z-index: 1;
-    background-image: url(inventory.jpg);
+    background-image: url(beaker.jpg);
 }
 
 
@@ -96,7 +96,7 @@
 .we_haul{
     /* min-width: 57ch; */
     min-height: 50ch;
-    width: 60%;
+    width: 100%;
     height: 300px;
     max-width: 1000ch;
     max-height: 1000ch;
@@ -106,7 +106,7 @@
 .mur_stationery{
   
     min-height: 50ch;
-    width: 60%;
+    width: 100%;
     height: 300px;
     max-width: 1000ch;
     max-height: 1000ch;

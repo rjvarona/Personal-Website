@@ -92,7 +92,7 @@ function App() {
                             <br/>
                             <br/>
                             <a class="cardWord card" style={{ backgroundColor: "black" }} href="https://youtu.be/LFlfeeMVN0I" target="_blank">
-                                <h1 style={{ color: "white" }}>Inventory</h1>
+                                <h1 style={{ color: "white" }}>Lab Tracker</h1>
                                 <p style={{ color: "white" }}>Created a lab tracking web application using .NETMVC, Google Firestore, NOSQL, and Vue.js.
                                      The application allowed users to create labs, assign equipment to labs, and keep track of the inventory of the lab. </p>
                             </a>
