@@ -56,7 +56,7 @@ function App() {
                             <br/>
                             <br />
                             <a class="cardWord card allImages" style={{ backgroundColor: "black" }} href="https://youtu.be/aHvqi0t7nbI" target="_blank">
-                                <h1 style={{ color: "white" }}>Rjavacado</h1>
+                                <h1 style={{ color: "white" }}>File Tracker</h1>
                                 <p style={{ color: "white" }}>
                                 Designed a personal file tracker web application for my videos, images, and music. Developed with mssql, 
                                 .NET Framework (MVC), Dapper ORM, C#, jQuery, and JavaScript.
