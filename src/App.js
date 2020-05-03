@@ -10,6 +10,7 @@ import ContactMe from './ContactMe.js'
 import Footer from './Footer.js'
 import Food from './Food.js'
 import Header from './Header.js'
+import mobilReplacement from './mobileReplacement.js'
 
 import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
 import scrollToComponent from 'react-scroll-to-component';
@@ -29,15 +30,42 @@ class App extends React.Component {
     }
   }
 
+
+
+  state = {
+    isMobile: false
+  }
+
+  handleWindowResize = () => {
+    this.setState({ isMobile: window.innerWidth < 800 });
+  }
+
+
+
   componentDidMount() {
+    window.addEventListener('resize', this.onWindowResize);
     scrollToComponent(this.Blue, { offset: 0, align: 'middle', duration: 500, ease: 'inCirc' });
 
     setTimeout(function () { //Start the timer
       this.setState({ render: false }) //After 1 second, set render to true
     }.bind(this), 3000)
+
+   
   }
 
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onWindowResize);
+  }
+
+
+
+
   render() {
+    const { items } = this.props;
+    const isMobile = window.innerWidth < 600;
+    const showItems = isMobile ?     <mobilReplacement /> : <ParallaxName /> ;
+
     if (this.state.render) {
       return (
         <div style={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
@@ -46,8 +74,8 @@ class App extends React.Component {
             size={150}
             color={"#123abc"}
             loading={this.state.render}
-            
-        />
+
+          />
         </div>)
     }
     else {
@@ -76,8 +104,8 @@ class App extends React.Component {
             {/* <Header /> */}
 
 
-            <section className="Parallax" ref={(section) => { this.Parallax = section; }}>
-              <ParallaxName />
+            <section className="Parallax" ref={(section) => { this.Parallax = section; }} showItems={showItems}>
+              {showItems}
             </section>
 
           </ScrollAnimation>
