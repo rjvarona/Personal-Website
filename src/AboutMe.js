@@ -67,7 +67,7 @@ function App() {
                             </Col>
 
                             <Col md={2} style={{ textAlign: "center" }}>
-                                <ScrollAnimation animateIn="fadeInRight" delay={1000} animateOnce="true">
+                                <ScrollAnimation animateIn="fadeInRight" delay={500} animateOnce="true">
                                     <h1>💗</h1>
                                     <h1 style={{ color: "white" }}>Passionate</h1>
                                     <p style={{ color: "#aca2a2" }}>Every project built with passion and love</p>
@@ -75,7 +75,7 @@ function App() {
                             </Col>
 
                             <Col md={2} style={{ textAlign: "center" }}>
-                                <ScrollAnimation animateIn="fadeInRight" delay={1000} animateOnce="true">
+                                <ScrollAnimation animateIn="fadeInRight" delay={500} animateOnce="true">
                                     <h1>💻 📱</h1>
                                     <h1 style={{ color: "white" }}>Responsive</h1>
                                     <p style={{ color: "#aca2a2" }}>Responsive designs that make webpages work on any device</p>
@@ -163,7 +163,7 @@ function App() {
 
                             </Col>
                             <Col md={5}>
-                                <ScrollAnimation animateIn="fadeInRight" delay={1000} animateOnce="true" >
+                                <ScrollAnimation animateIn="fadeInRight" delay={500} animateOnce="true" >
                                     <div id="Box1">
                                         <div class="Flex">
 

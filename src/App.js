@@ -87,8 +87,7 @@ class App extends React.Component {
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 
-          <Navbar bg="dark" expand="lg" fixed="top" >
-            <Navbar.Brand onClick={() => scrollToComponent(this.Parallax, { offset: 0, align: 'top', duration: 1500 })} style={{ color: "white" }}>RJV</Navbar.Brand>
+          <Navbar style={{ backgroundColor: "blue"}} expand="lg" fixed="top" >
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
