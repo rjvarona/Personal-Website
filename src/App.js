@@ -17,7 +17,7 @@ import scrollToComponent from 'react-scroll-to-component';
 import PacmanLoader from "react-spinners/PacmanLoader";
 import ScrollAnimation from 'react-animate-on-scroll';
 
-
+import Resume from './components/food/resume.pdf'
 
 
 
@@ -50,7 +50,7 @@ class App extends React.Component {
       this.setState({ render: false }) //After 1 second, set render to true
     }.bind(this), 3000)
 
-   
+
   }
 
 
@@ -58,20 +58,22 @@ class App extends React.Component {
     window.removeEventListener('resize', this.onWindowResize);
   }
 
-
-
+  
+  handleSearch() {
+    window.location.assign(Resume);
+  }
 
   render() {
     const { items } = this.props;
     const isMobile = window.innerWidth < 600;
-    const showItems = isMobile ?     <mobilReplacement /> : <ParallaxName /> ;
-
+    const showItems = isMobile ? <mobilReplacement /> : <ParallaxName />;
+    
     if (this.state.render) {
       return (
         <div style={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
 
           <PacmanLoader
-            size={150}
+            size={50}
             color={"#123abc"}
             loading={this.state.render}
 
@@ -85,25 +87,26 @@ class App extends React.Component {
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 
-            <Navbar bg="dark" expand="lg" fixed="top" >
-              <Navbar.Brand onClick={() => scrollToComponent(this.Parallax, { offset: 0, align: 'top', duration: 1500 })} style={{ color: "white" }}>RJV</Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
-                  <Nav.Link style={{ color: "white" }} onClick={() => scrollToComponent(this.About, { offset: 0, align: 'top', duration: 1500 })}>About</Nav.Link>
-                  <Nav.Link style={{ color: "white" }} onClick={() => scrollToComponent(this.Projects, { offset: 0, align: 'top', duration: 1500 })}>Projects</Nav.Link>
-                  <Nav.Link style={{ color: "white" }} onClick={() => scrollToComponent(this.Food, { offset: 0, align: 'top', duration: 1500 })}>Food</Nav.Link>
-                  <Nav.Link style={{ color: "white" }} onClick={() => scrollToComponent(this.ContactMe, { offset: 0, align: 'top', duration: 1500 })}>Contact</Nav.Link>
+          <Navbar bg="dark" expand="lg" fixed="top" >
+            <Navbar.Brand onClick={() => scrollToComponent(this.Parallax, { offset: 0, align: 'top', duration: 1500 })} style={{ color: "white" }}>RJV</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="mr-auto">
+                <Nav.Link style={{ color: "white" }} onClick={() => scrollToComponent(this.About, { offset: 0, align: 'top', duration: 1500 })}>About</Nav.Link>
+                <Nav.Link style={{ color: "white" }} onClick={() => scrollToComponent(this.Projects, { offset: 0, align: 'top', duration: 1500 })}>Projects</Nav.Link>
+                <Nav.Link style={{ color: "white" }} onClick={() => scrollToComponent(this.Food, { offset: 0, align: 'top', duration: 1500 })}>Food</Nav.Link>
+                <Nav.Link style={{ color: "white" }} onClick={() => scrollToComponent(this.ContactMe, { offset: 0, align: 'top', duration: 1500 })}>Contact</Nav.Link>
+                <Nav.Link style={{ color: "white" }} onClick={() => this.handleSearch()}> Resume</Nav.Link>
+              
+              </Nav>
 
-                </Nav>
+            </Navbar.Collapse>
+          </Navbar>
 
-              </Navbar.Collapse>
-            </Navbar>
-
-            {/* <Header /> */}
+          {/* <Header /> */}
 
 
-            <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce="true">
+          <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce="true">
             <section className="Parallax" ref={(section) => { this.Parallax = section; }} showItems={showItems}>
               {showItems}
             </section>

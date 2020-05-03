@@ -110,8 +110,8 @@ function App() {
                             <br/>
                             <a class="cardWord card" style={{ backgroundColor: "black" }}  href={YeetPost}>
                                 <h1 style={{ color: "white" }}>YeetPost</h1>
-                                <p style={{ color: "white" }}> YeetPost is an upcomming web application that is an
-                                alternative to Yik Yak. The application will be built on .NET Core, Vue.js, and Google Firestore.
+                                <p style={{ color: "white" }}> YeetPost is a scalable, location-based forum web application. The application is a spinoff/homage to Yik-Yak and was developed
+                                 with .NET Core, Firestore, and Vue.js.
                                  </p>
                             </a>
                         </div>
