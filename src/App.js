@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 // import { useSpring, animated } from 'react-spring'
 // import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 // import './styles.css' // // Icons made by Freepik from www.flaticon.com
-// import ParallaxName from './ParrallaxName.js'
+import ParallaxName from './ParrallaxName.js'
 import AboutMe from './AboutMe.js'
 import Projects from './Projects.js'
 import ContactMe from './ContactMe.js'
@@ -13,8 +13,8 @@ import Header from './Header.js'
 
 import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
 import scrollToComponent from 'react-scroll-to-component';
-
-const ParallaxName = lazy(() => import('./ParrallaxName.js'))
+import PacmanLoader from "react-spinners/PacmanLoader";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 
 
@@ -22,65 +22,89 @@ const ParallaxName = lazy(() => import('./ParrallaxName.js'))
 
 class App extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      render: true //Set render state to false
+    }
+  }
 
   componentDidMount() {
     scrollToComponent(this.Blue, { offset: 0, align: 'middle', duration: 500, ease: 'inCirc' });
+
+    setTimeout(function () { //Start the timer
+      this.setState({ render: false }) //After 1 second, set render to true
+    }.bind(this), 3000)
   }
 
   render() {
-    return (
+    if (this.state.render) {
+      return (
+        <div style={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
+
+          <PacmanLoader
+            size={150}
+            color={"#123abc"}
+            loading={this.state.render}
+            
+        />
+        </div>)
+    }
+    else {
+      return (
+
+        <div>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 
-      <div>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+          <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce="true">
+            <Navbar bg="dark" expand="lg" fixed="top" >
+              <Navbar.Brand onClick={() => scrollToComponent(this.Parallax, { offset: 0, align: 'top', duration: 1500 })} style={{ color: "white" }}>RJV</Navbar.Brand>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="mr-auto">
+                  <Nav.Link style={{ color: "white" }} onClick={() => scrollToComponent(this.About, { offset: 0, align: 'top', duration: 1500 })}>About</Nav.Link>
+                  <Nav.Link style={{ color: "white" }} onClick={() => scrollToComponent(this.Projects, { offset: 0, align: 'top', duration: 1500 })}>Projects</Nav.Link>
+                  <Nav.Link style={{ color: "white" }} onClick={() => scrollToComponent(this.Food, { offset: 0, align: 'top', duration: 1500 })}>Food</Nav.Link>
+                  <Nav.Link style={{ color: "white" }} onClick={() => scrollToComponent(this.ContactMe, { offset: 0, align: 'top', duration: 1500 })}>Contact</Nav.Link>
+
+                </Nav>
+
+              </Navbar.Collapse>
+            </Navbar>
+
+            {/* <Header /> */}
 
 
-        <Navbar bg="dark" expand="lg" fixed="top" >
-          <Navbar.Brand onClick={() => scrollToComponent(this.Parallax, { offset: 0, align: 'top', duration: 1500 })} style={{ color: "white" }}>RJV</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link style={{ color: "white" }} onClick={() => scrollToComponent(this.About, { offset: 0, align: 'top', duration: 1500 })}>About</Nav.Link>
-              <Nav.Link style={{ color: "white" }} onClick={() => scrollToComponent(this.Projects, { offset: 0, align: 'top', duration: 1500 })}>Projects</Nav.Link>
-              <Nav.Link style={{ color: "white" }} onClick={() => scrollToComponent(this.Food, { offset: 0, align: 'top', duration: 1500 })}>Food</Nav.Link>
-              <Nav.Link style={{ color: "white" }} onClick={() => scrollToComponent(this.ContactMe, { offset: 0, align: 'top', duration: 1500 })}>Contact</Nav.Link>
+            <section className="Parallax" ref={(section) => { this.Parallax = section; }}>
+              <ParallaxName />
+            </section>
 
-            </Nav>
-
-          </Navbar.Collapse>
-        </Navbar>
-
-        {/* <Header /> */}
-
-        <Suspense fallback={<div> Loading.... </div>}>
-          <section className="Parallax" ref={(section) => { this.Parallax = section; }}>
-            <ParallaxName />
+          </ScrollAnimation>
+          <section className="About" ref={(section) => { this.About = section; }}>
+            <AboutMe />
           </section>
-        </Suspense>
-
-        <section className="About" ref={(section) => { this.About = section; }}>
-          <AboutMe />
-        </section>
 
 
-        <section className="Projects" ref={(section) => { this.Projects = section; }}>
-          <Projects />
-        </section>
+          <section className="Projects" ref={(section) => { this.Projects = section; }}>
+            <Projects />
+          </section>
 
-        <section className="Food" ref={(section) => { this.Food = section; }}>
-          <Food />
-        </section>
+          <section className="Food" ref={(section) => { this.Food = section; }}>
+            <Food />
+          </section>
 
-        <section className="ContactMe" ref={(section) => { this.ContactMe = section; }}>
-          <ContactMe />
-        </section>
-        <Footer />
-
-
-      </div>
+          <section className="ContactMe" ref={(section) => { this.ContactMe = section; }}>
+            <ContactMe />
+          </section>
+          <Footer />
 
 
-    )
+        </div>
+
+
+      )
+    }
   }
 }
 
