@@ -155,22 +155,70 @@
 
 
 /* Responsive columns */
-@media screen and (max-width: 400px) {
-    .allImages {
-        min-width: 40ch;
 
-    }
-  }
 
   @media screen and (max-width: 1700px) {
     .allImages {
         min-width: 46ch;
 
     }
+    .card{
+        max-width: 30ch;
+        margin-left: 10%;
+        margin-top: -10%;
+        font-size: 25px;
+    }
+  }
+  @media screen and (max-width: 1500px) {
+    .allImages {
+        min-width: 46ch;
+
+    }
+    .card{
+        max-width: 30ch;
+        margin-left: 5%;
+        margin-top: -10%;
+        font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 1380px) {
+    .allImages {
+        min-width: 46ch;
+
+    }
+    .card{
+        max-width: 30ch;
+        margin-left: 3%;
+        margin-top: -10%;
+        font-size: 15px;
+    }
+  }
+  @media screen and (max-width: 1300px) {
+    .allImages {
+        min-width: 46ch;
+
+    }
+    .card{
+        max-width: 30ch;
+        margin-left: 5%;
+        margin-top: -10%;
+        font-size: 15px;
+    }
   }
   @media screen and (max-width: 1100px) {
     .allImages {
         min-width: 30ch;
 
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .allImages {
+        min-width: 40ch;
+
+    }
+    .card{
+        min-width: 20ch;
+        margin-top: -10%;
+        font-size: 20px;
     }
   }
