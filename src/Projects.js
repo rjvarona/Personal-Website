@@ -60,7 +60,7 @@ function App() {
                                 <p style={{ color: "white" }}>
                                 Designed a personal file tracker web application for my videos, images, and music. Developed with mssql, 
                                 .NET Framework (MVC), Dapper ORM, C#, jQuery, and JavaScript.
-    
+        
                                  </p>
                             </a>
                         </div>
