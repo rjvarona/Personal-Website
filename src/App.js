@@ -85,7 +85,6 @@ class App extends React.Component {
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 
-          <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce="true">
             <Navbar bg="dark" expand="lg" fixed="top" >
               <Navbar.Brand onClick={() => scrollToComponent(this.Parallax, { offset: 0, align: 'top', duration: 1500 })} style={{ color: "white" }}>RJV</Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -104,6 +103,7 @@ class App extends React.Component {
             {/* <Header /> */}
 
 
+            <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce="true">
             <section className="Parallax" ref={(section) => { this.Parallax = section; }} showItems={showItems}>
               {showItems}
             </section>
