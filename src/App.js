@@ -87,7 +87,7 @@ class App extends React.Component {
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 
-          <Navbar style={{ backgroundColor: "blue"}} expand="lg" fixed="top" >
+          <Navbar style={{ backgroundColor: "black", opacity : 0.8}} expand="lg" fixed="top" >
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
