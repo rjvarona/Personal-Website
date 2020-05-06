@@ -75,7 +75,7 @@ function App() {
                             <br/>
                             <br/>
                             <a class="cardWord card allImages" style={{ backgroundColor: "black" }}  href="http://www.hireadams.com/" target="_blank">
-                                <h1 style={{ color: "white" }}>Hire Adams</h1>
+                                <h1 style={{ color: "white" }}>Hire Adam</h1>
                                 <p style={{ color: "white" }}>
                                 Developed and published a static parody-resume website for a friend using Vue.js,
                                  Node.js, and Vuetify.    
