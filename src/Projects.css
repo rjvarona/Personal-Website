@@ -156,7 +156,20 @@
 
 /* Responsive columns */
 
+@media screen and (max-width: 2000px) {
+    .allImages {
+        min-width: 46ch;
 
+    }
+    .card{
+        max-width: 30ch;
+        margin-left: 5%;
+        margin-top: -10%;
+        font-size: 25px;
+        min-width: 0;
+
+    }
+  }
   @media screen and (max-width: 1700px) {
     .allImages {
         min-width: 46ch;
@@ -167,18 +180,20 @@
         margin-left: 5%;
         margin-top: -10%;
         font-size: 25px;
+        min-width: 0;
+
     }
   }
   @media screen and (max-width: 1500px) {
     .allImages {
         min-width: 46ch;
-
     }
     .card{
         max-width: 30ch;
         margin-left: 5%;
         margin-top: -10%;
         font-size: 20px;
+        min-width: 0;
     }
   }
   @media screen and (max-width: 1380px) {
@@ -191,6 +206,8 @@
         margin-left: 3%;
         margin-top: -10%;
         font-size: 15px;
+        min-width: 0;
+        
     }
   }
   @media screen and (max-width: 1300px) {
@@ -203,6 +220,7 @@
         margin-left: 5%;
         margin-top: -10%;
         font-size: 15px;
+        min-width: 0;
     }
   }
   @media screen and (max-width: 1100px) {
@@ -220,5 +238,6 @@
         min-width: 20ch;
         margin-top: -10%;
         font-size: 20px;
+        min-width: 0;
     }
   }
