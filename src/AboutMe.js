@@ -10,16 +10,7 @@ import Typical from 'react-typical'
 
 import ScrollAnimation from 'react-animate-on-scroll';
 
-// <Figure>
-// <Figure.Image
-//     width={"100%"}
-//     height={400}
-//     alt="171x180"
-//     src={profileImage}
-//     roundedCircle
-// />
 
-// </Figure>
 
 function App() {
     return (

@@ -1,243 +1,234 @@
-
-
 .card {
+  transition: 0.3s;
+  width: 80%;
+  background-size: cover;
 
-    transition: 0.3s;
-    width: 80%;
-    background-size: cover;
-    
-    margin-left: 10%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    z-index: 2;
-  }
+  margin-left: 10%;
 
-
- .cardWord {
-     font-size: 20px;
-     color: white;
- } 
-
-
- .card:hover{
-    transform: scale(1.1);
-     cursor: pointer;
- }
-  
-.inventory{
-    /* min-width: 57ch; */
-    min-height: 50ch;
-    width: 100%;
-    height: 100%;
-    max-width: 1000ch;
-    max-height: 1000ch;
-    z-index: 1;
-    background-image: url(beaker.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  z-index: 2;
 }
 
-
-
-
-
-
-.meme_soundboard{
-    /* min-width: 57ch; */
-    min-height: 50ch;
-    width: 100%;
-    height: 100%;
-    max-width: 1000ch;
-    max-height: 1000ch;
-    background-image: url(pewdiepie2.jpg);
+.cardWord {
+  font-size: 20px;
+  color: white;
 }
 
-.rjavacado{
-    /* min-width: 57ch; */
-    min-height: 50ch;
-    width: 100%;
-    height: 100%;
-    max-width: 1000ch;
-    max-height: 1000ch;
-    background-image: url(avacados.jpg);
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
-.hireadams{
-    /* min-width: 52ch; */
-    min-height: 50ch;
-    width: 100%;
-    height: 100%;
-    max-width: 1000ch;
-    max-height: 1000ch;
-    background-image: url(hireadams2.jpg);
+.inventory {
+  /* min-width: 57ch; */
+  min-height: 50ch;
+  width: 100%;
+  height: 100%;
+  max-width: 1000ch;
+  max-height: 1000ch;
+  z-index: 1;
+  background-image: url(beaker.jpg);
 }
 
-.yeetPost{
-    /* min-width: 57ch; */
-    min-height: 50ch;
-    width: 100%;
-    height: 300px;
-    max-width: 1000ch;
-    max-height: 1000ch;
-    background-image: url(YeetPost2.png);
+.meme_soundboard {
+  /* min-width: 57ch; */
+  min-height: 50ch;
+  width: 100%;
+  height: 100%;
+  max-width: 1000ch;
+  max-height: 1000ch;
+  background-image: url(pewdiepie2.jpg);
 }
 
-.e_joker{
-    /* min-width: 57ch; */
-    min-height: 50ch;
-    width: 100%;
-    height: 300px;
-    max-width: 1000ch;
-    max-height: 1000ch;
-    background-image: url(southern.jpg);
+.rjavacado {
+  /* min-width: 57ch; */
+  min-height: 50ch;
+  width: 100%;
+  height: 100%;
+  max-width: 1000ch;
+  max-height: 1000ch;
+  background-image: url(avacados.jpg);
 }
 
-.we_haul{
-    /* min-width: 57ch; */
-    min-height: 50ch;
-    width: 100%;
-    height: 300px;
-    max-width: 1000ch;
-    max-height: 1000ch;
-    background-image: url(southern.jpg);
+.hireadams {
+  /* min-width: 52ch; */
+  min-height: 50ch;
+  width: 100%;
+  height: 100%;
+  max-width: 1000ch;
+  max-height: 1000ch;
+  background-image: url(hireadams2.jpg);
 }
 
-.mur_stationery{
-  
-    min-height: 50ch;
-    width: 100%;
-    height: 300px;
-    max-width: 1000ch;
-    max-height: 1000ch;
-    background-image: url(southern.jpg);
+.yeetPost {
+  /* min-width: 57ch; */
+  min-height: 50ch;
+  width: 100%;
+  height: 300px;
+  max-width: 1000ch;
+  max-height: 1000ch;
+  background-image: url(YeetPost2.png);
 }
 
-
-
-.allImages{
-    min-width: 52ch;
+.e_joker {
+  /* min-width: 57ch; */
+  min-height: 50ch;
+  width: 100%;
+  height: 300px;
+  max-width: 1000ch;
+  max-height: 1000ch;
+  background-image: url(southern.jpg);
 }
 
-
-.notableProjects{
-    color: white;
-    font-size: 60px;
+.we_haul {
+  /* min-width: 57ch; */
+  min-height: 50ch;
+  width: 100%;
+  height: 300px;
+  max-width: 1000ch;
+  max-height: 1000ch;
+  background-image: url(southern.jpg);
 }
 
-.projectDiv{
-    position:relative;
-    z-index:1;
-
-    margin:50px auto;
- 
-
-    
+.mur_stationery {
+  min-height: 50ch;
+  width: 100%;
+  height: 300px;
+  max-width: 1000ch;
+  max-height: 1000ch;
+  background-image: url(southern.jpg);
 }
 
-.projectDiv:before{
-    position:absolute;
-    z-index:-1;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    clip-path: polygon(0 0, 20% 0, 100% 100%, 0% 100%);
+.allImages {
+  min-width: 52ch;
+}
 
+.notableProjects {
+  color: white;
+  font-size: 60px;
+}
 
+.projectDiv {
+  position: relative;
+  z-index: 1;
 
-    content:"";
+  margin: 50px auto;
+}
+
+.projectDiv:before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 20% 0, 100% 100%, 0% 100%);
+
+  content: "";
   background-color: #202122;
-    ;
-    
-
 }
 
+.panelClass {
+  z-index: 3;
+}
 
+.viewGit {
+  transition: 0.3s;
+  width: 80%;
+  background-size: cover;
+
+  margin-left: 10%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  font-size: 30px;
+}
+
+.viewGit:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 5px #ff0000;
+  cursor: pointer;
+}
 /* Responsive columns */
 
 @media screen and (max-width: 2000px) {
-    .allImages {
-        min-width: 46ch;
-
-    }
-    .card{
-        max-width: 30ch;
-        margin-left: 5%;
-        margin-top: -10%;
-        font-size: 20px;
-        min-width: 0;
-
-    }
+  .allImages {
+    min-width: 46ch;
   }
-  @media screen and (max-width: 1700px) {
-    .allImages {
-        min-width: 46ch;
-
-    }
-    .card{
-        max-width: 30ch;
-        margin-left: 5%;
-        margin-top: -10%;
-        font-size: 20px;
-        min-width: 0;
-
-    }
+  .card {
+    max-width: 30ch;
+    margin-left: 5%;
+    margin-top: -10%;
+    font-size: 20px;
+    min-width: 0;
   }
-  @media screen and (max-width: 1500px) {
-    .allImages {
-        min-width: 46ch;
-    }
-    .card{
-        max-width: 30ch;
-        margin-left: 5%;
-        margin-top: -10%;
-        font-size: 20px;
-        min-width: 0;
-    }
+}
+@media screen and (max-width: 1700px) {
+  .allImages {
+    min-width: 46ch;
   }
-  @media screen and (max-width: 1380px) {
-    .allImages {
-        min-width: 46ch;
-
-    }
-    .card{
-        max-width: 30ch;
-        margin-left: 3%;
-        margin-top: -10%;
-        font-size: 15px;
-        min-width: 0;
-        
-    }
+  .card {
+    max-width: 30ch;
+    margin-left: 5%;
+    margin-top: -10%;
+    font-size: 20px;
+    min-width: 0;
   }
-  @media screen and (max-width: 1300px) {
-    .allImages {
-        min-width: 46ch;
-
-    }
-    .card{
-        max-width: 30ch;
-        margin-left: 5%;
-        margin-top: -10%;
-        font-size: 15px;
-        min-width: 0;
-    }
+}
+@media screen and (max-width: 1500px) {
+  .allImages {
+    min-width: 46ch;
   }
-  @media screen and (max-width: 1100px) {
-    .allImages {
-        min-width: 30ch;
-
-    }
+  .card {
+    max-width: 30ch;
+    margin-left: 5%;
+    margin-top: -10%;
+    font-size: 20px;
+    min-width: 0;
   }
-  @media screen and (max-width: 400px) {
-    .allImages {
-        min-width: 40ch;
-
-    }
-    .card{
-        min-width: 20ch;
-        margin-top: -10%;
-        font-size: 20px;
-        min-width: 0;
-    }
+}
+@media screen and (max-width: 1380px) {
+  .allImages {
+    min-width: 46ch;
   }
+  .card {
+    max-width: 30ch;
+    margin-left: 3%;
+    margin-top: -10%;
+    font-size: 15px;
+    min-width: 0;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .allImages {
+    min-width: 46ch;
+  }
+  .card {
+    max-width: 30ch;
+    margin-left: 5%;
+    margin-top: -10%;
+    font-size: 15px;
+    min-width: 0;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .allImages {
+    min-width: 30ch;
+  }
+}
+@media screen and (max-width: 400px) {
+  .allImages {
+    min-width: 40ch;
+  }
+  .card {
+    min-width: 20ch;
+    margin-top: -10%;
+    font-size: 20px;
+    min-width: 0;
+  }
+}
