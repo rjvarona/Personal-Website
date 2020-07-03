@@ -26,6 +26,21 @@ const getpsMap = () => {
     "yeetpost",
     "With the downfall of Yik-Yak, there has been a need for a major anonymous forum posting app. Unlike Yik-Yak, YeetPost is developed on both mobile and website. Yik-Yak's fail to address cyberbullying caused the application to be taken down from the mobile market by the end of 2017. YeetPost tries to address this issue with the introduction of cyber bullying. YeetPost also gives the user to post Yeets in random locations in the u.s. The user is able to like, flag, comment, and browse the yeets by trending or new. \n I implemented this web app with .NET, C#, Google Firestore, Vue.js, and Vuetify."
   );
+
+  psMap.set(
+    "ejoker",
+    "With thousands of students attending Southern Adventist University, it is sometimes hard finding the person you are looking for. At southern IT department we created ejoker, the online southern profile directory that allows student and faculty create profiles and provide custom searches for people to find who they are looking for. My role was maintaing and improving the application. I wrote custom stored procedures, worked on the front-end, and worked on different roles such as admin and student for the application. I introduced many new features. We used .NET C#, MSSQL, jQuery, and Dapper ORM."
+  );
+
+  psMap.set(
+    "we-haul",
+    "With thousands of students incoming at Southern Adventist University every year, there is a need for people to help haul their stuff into their new rooms. We-haul is a help move-in registration app that allows anyone from Southern or outside Southern register to register and help new incoming students move into their new rooms. My role was to build the application from scratch with .NET MVC, C#, MSSQL, and jQuery. I designed the db, frontend, and worked on different roles of the application."
+  );
+
+  psMap.set(
+    "assistpfe",
+    "College tuition is a burden for many students and parents. At Southern IT, we created a way for elementary and high-school students to generate college scholarships. We are able to do this by tracking their community service hours and calculate the amount of scholarship money they would receive. I developed different roles with Microsoft Identity, handled complex types of data by writing stored procedures, and wrote part of the front-end. This application was developed with .NET MVC, C#, MSSQL, Dapper ORM, and Vue.js"
+  );
   return psMap;
 };
 
@@ -44,6 +59,12 @@ const getgitMap = () => {
   linkMap.set("inventory", "https://github.com/2-letters/Inventory-Tracker");
 
   linkMap.set("yeetpost", "https://github.com/rjvarona/Yik-Yak-web-clone");
+
+  linkMap.set("ejoker", "https://myaccess.southern.edu/mvc/ejoker");
+
+  linkMap.set("we-haul", "https://myaccess.southern.edu/mvc/wehaul");
+
+  linkMap.set("assistpfe", "https://myaccess.southern.edu/");
   return linkMap;
 };
 const getvidMap = () => {

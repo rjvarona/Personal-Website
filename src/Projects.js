@@ -20,10 +20,12 @@ function App() {
   const [psMap, setPMap] = useState(Maps.getpsMap());
   const [vidMap, setvidMap] = useState(Maps.getvidMap());
   const [gitMap, setgitMap] = useState(Maps.getgitMap());
+  const [fromSouthern, setfromSouthern] = useState(false);
 
-  const updateBoard = key => {
+  const updateBoard = (key, isFrom) => {
     setModal(!modalTest);
     setKey(key);
+    setfromSouthern(isFrom);
   };
 
   return (
@@ -51,7 +53,7 @@ function App() {
                 <p
                   class="cardWord card allImages"
                   style={{ backgroundColor: "black" }}
-                  onClick={() => updateBoard("memeboard")}
+                  onClick={() => updateBoard("memeboard", false)}
                 >
                   <h1 style={{ color: "white" }}> Meme Soundboard</h1>
                   <p style={{ color: "white" }}>
@@ -78,7 +80,7 @@ function App() {
                 <p
                   class="cardWord card allImages"
                   style={{ backgroundColor: "black" }}
-                  onClick={() => updateBoard("rjavacado")}
+                  onClick={() => updateBoard("rjavacado", false)}
                 >
                   <h1 style={{ color: "white" }}>RJ Avacado</h1>
                   <p style={{ color: "white" }}>
@@ -105,7 +107,7 @@ function App() {
                 <p
                   class="cardWord card allImages"
                   style={{ backgroundColor: "black" }}
-                  onClick={() => updateBoard("hireadams")}
+                  onClick={() => updateBoard("hireadams", false)}
                 >
                   <h1 style={{ color: "white" }}>Hire Adams</h1>
                   <p style={{ color: "white" }}>
@@ -130,7 +132,7 @@ function App() {
                 <p
                   class="cardWord card allImages"
                   style={{ backgroundColor: "black" }}
-                  onClick={() => updateBoard("inventory")}
+                  onClick={() => updateBoard("inventory", false)}
                 >
                   <h1 style={{ color: "white" }}>Lab Tracker</h1>
                   <p style={{ color: "white" }}>
@@ -159,7 +161,7 @@ function App() {
                 <p
                   class="cardWord card allImages"
                   style={{ backgroundColor: "black" }}
-                  onClick={() => updateBoard("yeetpost")}
+                  onClick={() => updateBoard("yeetpost", false)}
                 >
                   <h1 style={{ color: "white" }}>YeetPost</h1>
                   <p style={{ color: "white" }}>
@@ -184,11 +186,10 @@ function App() {
                 <br />
                 <br />
                 <br />
-                <a
+                <p
                   class="cardWord card allImages"
                   style={{ backgroundColor: "black" }}
-                  href="http://www.gingercreek.org/wp-content/uploads/2015/08/video-coming-soon.jpg"
-                  target="_blank"
+                  onClick={() => updateBoard("ejoker", true)}
                 >
                   <h1 style={{ color: "white" }}>E Joker</h1>
                   <p style={{ color: "white" }}>
@@ -198,7 +199,7 @@ function App() {
                     parameters such as students, faculty, first letter of last
                     name, and first letter of first name.
                   </p>
-                </a>
+                </p>
               </div>
             </ScrollAnimation>
           </Col>
@@ -214,11 +215,10 @@ function App() {
                 <br />
                 <br />
                 <br />
-                <a
+                <p
                   class="cardWord card allImages"
                   style={{ backgroundColor: "black" }}
-                  href="https://myaccess.southern.edu/mvc/wehaul"
-                  target="_blank"
+                  onClick={() => updateBoard("we-haul", true)}
                 >
                   <h1 style={{ color: "white" }}>We Haul</h1>
                   <p style={{ color: "white" }}>
@@ -227,7 +227,7 @@ function App() {
                     to register times they can help other students move into
                     their new rooms.
                   </p>
-                </a>
+                </p>
               </div>
             </ScrollAnimation>
           </Col>
@@ -243,19 +243,18 @@ function App() {
                 <br />
                 <br />
                 <br />
-                <a
+                <p
                   class="cardWord card allImages"
                   style={{ backgroundColor: "black" }}
-                  href="http://www.gingercreek.org/wp-content/uploads/2015/08/video-coming-soon.jpg"
-                  target="_blank"
+                  onClick={() => updateBoard("assistpfe", true)}
                 >
-                  <h1 style={{ color: "white" }}>MUR-Stationery</h1>
+                  <h1 style={{ color: "white" }}>Assist-PFE</h1>
                   <p style={{ color: "white" }}>
-                    Redeveloped the Front-End and controllers of an existing
-                    Stationery application that was using Angular.js with
-                    Vue.js.
+                    Aided in creating an app that allows elementary and
+                    highschool students generate scholarship money through
+                    community service
                   </p>
-                </a>
+                </p>
               </div>
             </ScrollAnimation>
           </Col>
@@ -265,8 +264,6 @@ function App() {
         className="panelClass"
         overlayClassName="some-custom-overlay-class"
         isOpen={modalTest}
-        title="Meme Soundboard!!"
-        subtitle="So Cool"
         onRequestClose={() => {
           // triggered on "<" on left top click or on outside click
           setModal(false);
@@ -302,20 +299,25 @@ function App() {
                     href={gitMap.get(keyString)}
                     target="_blank"
                   >
-                    View on Github <FaGithub />
+                    View Project
                   </a>
                 </Col>
               </Row>
             </Col>
+
             <Col md={8}>
-              <iframe
-                width="80%"
-                height="100%"
-                src={vidMap.get(keyString)}
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
+              {fromSouthern ? (
+                <img src="https://theknowledgereview.com/wp-content/uploads/2017/12/Southern_Adventist_University12.jpg"></img>
+              ) : (
+                <iframe
+                  width="80%"
+                  height="100%"
+                  src={vidMap.get(keyString)}
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              )}
             </Col>
           </Row>
         </div>
