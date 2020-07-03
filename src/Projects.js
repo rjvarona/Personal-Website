@@ -2,7 +2,6 @@ import React from "react";
 import "./Projects.css"; // // Icons made by Freepik from www.flaticon.com
 import { Container, Col, Row } from "react-bootstrap";
 
-import YeetPost from "./components/food/YeetPost.pdf";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import SlidingPane from "react-sliding-pane";
@@ -11,15 +10,14 @@ import { useState } from "react";
 
 import Maps from "./projectMapHelper";
 
-import { FaGithub } from "react-icons/fa";
 debugger;
 
 function App() {
   const [modalTest, setModal] = useState(false);
   const [keyString, setKey] = useState("yeet");
-  const [psMap, setPMap] = useState(Maps.getpsMap());
-  const [vidMap, setvidMap] = useState(Maps.getvidMap());
-  const [gitMap, setgitMap] = useState(Maps.getgitMap());
+  const [psMap] = useState(Maps.getpsMap());
+  const [vidMap] = useState(Maps.getvidMap());
+  const [gitMap] = useState(Maps.getgitMap());
   const [fromSouthern, setfromSouthern] = useState(false);
 
   const updateBoard = (key, isFrom) => {
@@ -151,7 +149,6 @@ function App() {
               animateIn="fadeInUp"
               delay={500}
               animateOnce="true"
-              target="_blank"
             >
               <div class="yeetPost allImages">
                 <br />

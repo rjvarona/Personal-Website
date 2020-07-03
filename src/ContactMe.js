@@ -53,7 +53,7 @@ class App extends React.Component {
                   My name is RJ Varona, and I recently graduated from Southern
                   Adventist University with a b.s. in Computer Science, and I
                   hope to grow as a developer. So feel free to contact me about
-                  any opportunities 😊.
+                  any opportunities <span>😊</span>.
                 </p>
               </ScrollAnimation>
             </Col>

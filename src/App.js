@@ -1,18 +1,13 @@
-import React, { Suspense, lazy } from "react";
-import ReactDOM from "react-dom";
-// import { useSpring, animated } from 'react-spring'
-// import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
-// import './styles.css' // // Icons made by Freepik from www.flaticon.com
+import React from "react";
+
 import ParallaxName from "./ParrallaxName.js";
 import AboutMe from "./AboutMe.js";
 import Projects from "./Projects.js";
 import ContactMe from "./ContactMe.js";
 import Footer from "./Footer.js";
 import Food from "./Food.js";
-import Header from "./Header.js";
-import mobilReplacement from "./mobileReplacement.js";
 
-import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import scrollToComponent from "react-scroll-to-component";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -62,7 +57,6 @@ class App extends React.Component {
   }
 
   render() {
-    const { items } = this.props;
     const isMobile = window.innerWidth < 600;
     const showItems = isMobile ? <mobilReplacement /> : <ParallaxName />;
 

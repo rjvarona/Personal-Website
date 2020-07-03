@@ -1,16 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { useSpring, animated } from 'react-spring'
-import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
-import './aboutMe.scss' // // Icons made by Freepik from www.flaticon.com
-import { Container, Col, Row, Image, Figure, Badge } from 'react-bootstrap'
-import { Spring } from 'react-spring'
-import profileImage from '../src/FLEX.jpg'
-import Typical from 'react-typical'
-import Gallery from 'react-grid-gallery';
-import avacado from './avacados.jpg'
+import React from "react";
+import "./aboutMe.scss";
+import { Container, Col, Row } from "react-bootstrap";
 
-import Flex from './adamsKAWAI2.jpg'
+import Gallery from "react-grid-gallery";
 
 import Bibingka from "./components/food/Bibingka.jpg";
 import chocoTart from "./components/food/chocoTart.jpg";
@@ -42,204 +34,189 @@ import poachedeggs from "./components/food/poached eggs.jpg";
 
 import TSeries from "./components/food/TSeries.jpg";
 
-import ScrollAnimation from 'react-animate-on-scroll';
+import ScrollAnimation from "react-animate-on-scroll";
 
+const IMAGES = [
+  {
+    src: Bibingka,
+    thumbnail: Bibingka,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
 
-const IMAGES =
-    [{
-        src: Bibingka,
-        thumbnail: Bibingka,
-        thumbnailWidth: 320,
-        thumbnailHeight: 174,
+    caption: "Filipino coconut Cake"
+  },
+  {
+    src: chocoTart,
+    thumbnail: chocoTart,
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+    caption: "Me very own chocolate tart"
+  },
+  {
+    src: chocoTart2,
+    thumbnail: chocoTart2,
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+    caption: "Me very own chocolate tart again"
+  },
+  {
+    src: chocoTart3,
+    thumbnail: chocoTart3,
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+    caption: "Me very own chocolate tart again"
+  },
+  {
+    src: flan,
+    thumbnail: flan,
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+    caption: "Me very own flan"
+  },
+  {
+    src: lemonKiwi,
+    thumbnail: lemonKiwi,
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+    caption: "I maketh lemonKiwi"
+  },
+  {
+    src: lemonKiwi2,
+    thumbnail: lemonKiwi2,
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+    caption: "lemonKiwi AGAAIIN"
+  },
+  {
+    src: pioouuss,
+    thumbnail: pioouuss,
+    thumbnailWidth: 250,
+    thumbnailHeight: 212,
+    caption: "its pie timme"
+  },
+  {
+    src: pious,
+    thumbnail: pious,
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+    caption: "its pie timme once again"
+  },
+  {
+    src: roseApple,
+    thumbnail: roseApple,
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+    caption: "rose me apple"
+  },
+  {
+    src: roseApple2,
+    thumbnail: roseApple2,
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+    caption: "its rpse pie timme"
+  },
 
-        caption: "Filipino coconut Cake"
-    },
-    {
-        src: chocoTart,
-        thumbnail: chocoTart,
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption: "Me very own chocolate tart"
-    },
-    {
-        src: chocoTart2,
-        thumbnail: chocoTart2,
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption: "Me very own chocolate tart again"
-    },
-    {
-        src: chocoTart3,
-        thumbnail: chocoTart3,
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption: "Me very own chocolate tart again"
-    },
-    {
-        src: flan,
-        thumbnail: flan,
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption: "Me very own flan"
-    },
-    {
-        src: lemonKiwi,
-        thumbnail: lemonKiwi,
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption: "I maketh lemonKiwi"
-    },
-    {
-        src: lemonKiwi2,
-        thumbnail: lemonKiwi2,
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption: "lemonKiwi AGAAIIN"
-    },
-    {
-        src: pioouuss,
-        thumbnail: pioouuss,
-        thumbnailWidth: 250,
-        thumbnailHeight: 212,
-        caption: "its pie timme"
-    }
-        ,
-    {
-        src: pious,
-        thumbnail: pious,
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption: "its pie timme once again"
-    }
-        ,
-    {
-        src: roseApple,
-        thumbnail: roseApple,
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption: "rose me apple"
-    }
-        ,
-    {
-        src: roseApple2,
-        thumbnail: roseApple2,
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption: "its rpse pie timme"
-    }
-
-        ,
-    {
-        src: strawberryLemon,
-        thumbnail: strawberryLemon,
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption: "strawberry lemon tart"
-    }
-        ,
-
-    {
-        src: strawberryLemon2,
-        thumbnail: strawberryLemon2,
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption: "strawberry lemon tart"
-    }
-        ,
-
-
-    {
-        src: dumplings,
-        thumbnail: dumplings,
-        thumbnailWidth: 270,
-        thumbnailHeight: 250,
-        caption: "Dumplings"
-    }
-        ,
-    {
-        src: cassavacake,
-        thumbnail: cassavacake,
-        thumbnailWidth: 250,
-        thumbnailHeight: 250,
-        caption: "Cassava Cake"
-    }
-        ,
-    {
-        src: bluerberry,
-        thumbnail: bluerberry,
-        thumbnailWidth: 250,
-        thumbnailHeight: 250,
-        caption: "Blue berry Pie"
-    }
-        ,
-    {
-        src: tartkiwi2,
-        thumbnail: tartkiwi2,
-        thumbnailWidth: 250,
-        thumbnailHeight: 250,
-        caption: "Cranberry Kiwi Tart"
-    }
-        ,
-    {
-        src: poachedeggs,
-        thumbnail: poachedeggs,
-        thumbnailWidth: 250,
-        thumbnailHeight: 250,
-        caption: "Avacado Toast"
-    }
-        ,
-    ];
+  {
+    src: strawberryLemon,
+    thumbnail: strawberryLemon,
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+    caption: "strawberry lemon tart"
+  },
+  {
+    src: strawberryLemon2,
+    thumbnail: strawberryLemon2,
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+    caption: "strawberry lemon tart"
+  },
+  {
+    src: dumplings,
+    thumbnail: dumplings,
+    thumbnailWidth: 270,
+    thumbnailHeight: 250,
+    caption: "Dumplings"
+  },
+  {
+    src: cassavacake,
+    thumbnail: cassavacake,
+    thumbnailWidth: 250,
+    thumbnailHeight: 250,
+    caption: "Cassava Cake"
+  },
+  {
+    src: bluerberry,
+    thumbnail: bluerberry,
+    thumbnailWidth: 250,
+    thumbnailHeight: 250,
+    caption: "Blue berry Pie"
+  },
+  {
+    src: tartkiwi2,
+    thumbnail: tartkiwi2,
+    thumbnailWidth: 250,
+    thumbnailHeight: 250,
+    caption: "Cranberry Kiwi Tart"
+  },
+  {
+    src: poachedeggs,
+    thumbnail: poachedeggs,
+    thumbnailWidth: 250,
+    thumbnailHeight: 250,
+    caption: "Avacado Toast"
+  }
+];
 function App() {
-    return (
+  return (
+    <div class="slanted2">
+      <br />
 
-        <div class="slanted2">
-            <br />
+      <br />
+      <br />
 
-            <br />
-            <br />
+      <Container style={{ maxWidth: "initial" }}>
+        <div>
+          <Row>
+            <Col md={12} style={{ textAlign: "center" }}>
+              <ScrollAnimation
+                animateIn="fadeInLeft"
+                delay={500}
+                animateOnce="true"
+              >
+                <br />
 
+                <h1 style={{ color: "white", fontSize: 45 }}> Home Cook 😊</h1>
+              </ScrollAnimation>
 
+              <ScrollAnimation
+                animateIn="fadeInRight"
+                delay={500}
+                animateOnce="true"
+              >
+                <p style={{ color: "white", fontSize: 25 }}>
+                  “All you need is love. But a little chocolate now and then
+                  doesn't hurt.” ~ Charles M. Schulz
+                </p>
+              </ScrollAnimation>
 
+              <br />
+            </Col>
 
-            <Container style={{ maxWidth: "initial" }}>
-                <div>
+            <Col md={1}></Col>
 
-                    <Row>
+            <Col md={12} style={{ textAlign: "center" }}>
+              <ScrollAnimation
+                animateIn="fadeInUp"
+                delay={500}
+                animateOnce="true"
+              >
+                <Gallery images={IMAGES} />
+              </ScrollAnimation>
+            </Col>
 
-                        <Col md={12} style={{ textAlign: "center" }} >
-                            <ScrollAnimation animateIn="fadeInLeft" delay={500} animateOnce="true">
-                                <br />
+            <Col md={1}></Col>
 
-                                <h1 style={{ color: "white", fontSize: 45 }}> Home Cook 😊
-                            </h1>
-                            </ScrollAnimation>
-
-
-                            <ScrollAnimation animateIn="fadeInRight" delay={500} animateOnce="true">
-                                <p style={{ color: "white", fontSize: 25 }}>
-                                    “All you need is love. But a little chocolate now and then doesn't hurt.” ~ Charles M. Schulz
-                            </p>
-                            </ScrollAnimation>
-
-                            <br />
-                        </Col>
-
-
-                        <Col md={1}>
-                        </Col>
-
-                        <Col md={12} style={{ textAlign: "center" }}>
-                        <ScrollAnimation animateIn="fadeInUp" delay={500} animateOnce="true">
-                            <Gallery images={IMAGES} />
-                            </ScrollAnimation>
-                        </Col>
-
-                        <Col md={1}>
-                        </Col>
-
-
-
-                        {/* <Col md={5}>
+            {/* <Col md={5}>
 
                             <div id="box2" style={{ textAlign: "center" }}>
                                 <h1 style={{ fontSize: "30px", color: "white" }}> <Typical
@@ -290,22 +267,20 @@ function App() {
                             </div>
 
                         </Col> */}
-                    </Row>
-                </div>
-            </Container>
-            <br />
-
-            <br />
-
-            <br />
-
-
-            <br />
-            <br />
-            <br />
+          </Row>
         </div>
+      </Container>
+      <br />
 
-    )
+      <br />
+
+      <br />
+
+      <br />
+      <br />
+      <br />
+    </div>
+  );
 }
 
 export default App;
