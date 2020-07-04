@@ -10,8 +10,6 @@ import { useState } from "react";
 
 import Maps from "./projectMapHelper";
 
-debugger;
-
 function App() {
   const [modalTest, setModal] = useState(false);
   const [keyString, setKey] = useState("yeet");
@@ -257,69 +255,71 @@ function App() {
           </Col>
         </Row>
       </Container>
-      <SlidingPane
-        className="panelClass"
-        overlayClassName="some-custom-overlay-class"
-        isOpen={modalTest}
-        onRequestClose={() => {
-          // triggered on "<" on left top click or on outside click
-          setModal(false);
-        }}
-      >
-        <div style={{ color: "white" }}>
-          <Row>
-            <Col md={4}>
-              <Row>
-                <Col md={1}></Col>
+      <div className="blackOverlay">
+        <SlidingPane
+          style={{ backgroundColor: "black !important" }}
+          overlayClassName="blackOverlay"
+          isOpen={modalTest}
+          onRequestClose={() => {
+            // triggered on "<" on left top click or on outside click
+            setModal(false);
+          }}
+        >
+          <div style={{ color: "white" }}>
+            <Row>
+              <Col md={4}>
+                <Row>
+                  <Col md={1}></Col>
 
-                <Col md={11}>
-                  <h1 style={{ justifyContent: "center", marginLeft: "10%" }}>
-                    What is it?
-                  </h1>
-                </Col>
-              </Row>
+                  <Col md={11}>
+                    <h1 style={{ justifyContent: "center", marginLeft: "20%" }}>
+                      What is it?
+                    </h1>
+                  </Col>
+                </Row>
 
-              <Row>
-                <Col md={1}></Col>
+                <Row>
+                  <Col md={1}></Col>
 
-                <Col md={11}>
-                  <p>{psMap.get(keyString)}</p>
-                </Col>
-              </Row>
+                  <Col md={11}>
+                    <p>{psMap.get(keyString)}</p>
+                  </Col>
+                </Row>
 
-              <Row>
-                <Col md={1}></Col>
+                <Row>
+                  <Col md={1}></Col>
 
-                <Col md={11}>
-                  <a
-                    className="viewGit"
-                    href={gitMap.get(keyString)}
-                    target="_blank"
-                  >
-                    View Project
-                  </a>
-                </Col>
-              </Row>
-            </Col>
+                  <Col md={11}>
+                    <a
+                      className="viewGit"
+                      href={gitMap.get(keyString)}
+                      target="_blank"
+                    >
+                      View Project
+                    </a>
+                  </Col>
+                </Row>
+              </Col>
 
-            <Col md={8}>
-              {fromSouthern ? (
-                <img src="https://theknowledgereview.com/wp-content/uploads/2017/12/Southern_Adventist_University12.jpg"></img>
-              ) : (
-                <iframe
-                  width="80%"
-                  height="100%"
-                  src={vidMap.get(keyString)}
-                  frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              )}
-            </Col>
-          </Row>
-        </div>
-        <br />
-      </SlidingPane>
+              <Col md={8}>
+                {fromSouthern ? (
+                  <img src="https://theknowledgereview.com/wp-content/uploads/2017/12/Southern_Adventist_University12.jpg"></img>
+                ) : (
+                  <iframe
+                    width="80%"
+                    height="100%"
+                    src={vidMap.get(keyString)}
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                )}
+              </Col>
+            </Row>
+          </div>
+          <br />
+        </SlidingPane>
+      </div>
     </div>
   );
 }

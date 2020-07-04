@@ -92,7 +92,9 @@
   max-height: 1000ch;
   background-image: url(southern.jpg);
 }
-
+.blackOverlay {
+  background-color: black;
+}
 .mur_stationery {
   min-height: 50ch;
   width: 100%;
@@ -140,8 +142,6 @@
   width: 80%;
   background-size: cover;
 
-  margin-left: 10%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,6 +156,13 @@
 }
 /* Responsive columns */
 
+.slide-pane__content {
+  background-color: black !important;
+}
+
+.slide-pane__overlay {
+  z-index: 3 !important;
+}
 @media screen and (max-width: 2000px) {
   .allImages {
     min-width: 46ch;
