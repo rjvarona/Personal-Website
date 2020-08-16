@@ -30,11 +30,11 @@ function App() {
                   delay={500}
                   animateOnce="true"
                 >
-                  <h1>💡</h1>
+                  <h1></h1>
                   <h1 style={{ color: "white" }}>Creative</h1>
 
                   <p style={{ color: "#aca2a2" }}>
-                    Creative designs that make websites come to life
+                    I strive to create ideas and projects that centralize around originality and authenticity
                   </p>
                 </ScrollAnimation>
               </Col>
@@ -45,10 +45,10 @@ function App() {
                   delay={500}
                   animateOnce="true"
                 >
-                  <h1>🧹</h1>
-                  <h1 style={{ color: "white" }}>Clean</h1>
+                  <h1></h1>
+                  <h1 style={{ color: "white" }}>Unorthodox</h1>
                   <p style={{ color: "#aca2a2" }}>
-                    Strong believer in writing clean code for better development
+                    I offer ways of thinking and ideology I strongly believe others do not posess
                   </p>
                 </ScrollAnimation>
               </Col>
@@ -59,10 +59,10 @@ function App() {
                   delay={500}
                   animateOnce="true"
                 >
-                  <h1>💗</h1>
-                  <h1 style={{ color: "white" }}>Passionate</h1>
+                  <h1></h1>
+                  <h1 style={{ color: "white" }}>Adaptive</h1>
                   <p style={{ color: "#aca2a2" }}>
-                    Every project built with passion and love
+                    I learn and adapt quickly and my pace only increases the more I learn
                   </p>
                 </ScrollAnimation>
               </Col>
@@ -73,10 +73,10 @@ function App() {
                   delay={500}
                   animateOnce="true"
                 >
-                  <h1>💻 📱</h1>
-                  <h1 style={{ color: "white" }}>Responsive</h1>
+                  <h1></h1>
+                  <h1 style={{ color: "white" }}>Oriented</h1>
                   <p style={{ color: "#aca2a2" }}>
-                    Responsive designs that make webpages work on any device
+                    I recognize the necessary goals I must take and dominate them
                   </p>
                 </ScrollAnimation>
               </Col>
@@ -105,11 +105,11 @@ function App() {
                           {" "}
                           <Typical
                             steps={[
-                              "WHO AM I?",
+                              "Learn About Me",
                               4000,
-                              "I 💖 YOU",
+                              "Contact Me",
                               4000,
-                              "HIRE ME!!",
+                              "Let's Collaborate",
                               4000
                             ]}
                             loop={Infinity}
@@ -118,11 +118,11 @@ function App() {
                         </h1>
 
                         <p class="ABOUTAB">
-                          I am a passionate web developer based in Los Angeles,
-                          who loves creating fun and interactive software, and I
-                          enjoy all aspects of software development from start
-                          to finish. I also love looking at memes and cooking
-                          food.
+                          I am a young student attending a university based in Indiana, USA. I am obsessed
+                          with virtual reality systems and the potential of haptic feedback. 
+                          I hope to meet more excited developers in the field of spatial computing
+                          and collaborate on projects that cause impact. Many categories of VR development 
+                          interest me from intensely immersive gaming to fitness program integration into simulated environments.
                         </p>
                         <Row>
                           <Col
@@ -139,21 +139,19 @@ function App() {
                           <Col md={5}>
                             <ol class="ABOUTAB">
                               <li>C#</li>
-                              <li>Javascript#</li>
-                              <li>Vue.js</li>
-                              <li>SQL</li>
-                              <li> HTML & CSS</li>
-                              <li>React.js</li>
+                              <li>Javascript</li>
+                              <li>Python</li>
+                              <li>HTML</li>
+                              <li>CSS</li>
+                              <li>Blender</li>
                             </ol>
                           </Col>
                           <Col md={6}>
                             <ol class="ABOUTAB">
-                              <li>.NET MVC(Framework)</li>
-                              <li>Express.js</li>
-                              <li>Dapper ORM</li>
-                              <li>Google Firestore</li>
-                              <li>MSSQL</li>
+                              <li>Unity</li>
+                              <li>Unity XR</li>
                               <li>GIT</li>
+                              <li>Unreal Engine</li>
                             </ol>
                           </Col>
                         </Row>

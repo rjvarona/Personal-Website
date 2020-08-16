@@ -148,7 +148,7 @@ function App() {
               style={{ transform: props.xy.interpolate(trans4) }}
             >
               <p style={{ fontSize: "100px", color: "blue", opacity: "80%" }}>
-                RJ Varona
+                Spencer King
               </p>
             </animated.div>
             <animated.div
@@ -156,7 +156,7 @@ function App() {
               style={{ transform: props.xy.interpolate(trans4_5) }}
             >
               <p style={{ fontSize: "100px", color: "green", opacity: "80%" }}>
-                RJ Varona
+                Spencer King
               </p>
             </animated.div>
             <animated.div
@@ -164,14 +164,14 @@ function App() {
               style={{ transform: props.xy.interpolate(trans5) }}
             >
               <p style={{ fontSize: "100px", color: "red", opacity: "80%" }}>
-                RJ Varona
+                Spencer King
               </p>
             </animated.div>
             <animated.div
               class="card4"
               style={{ transform: props.xy.interpolate(trans6) }}
             >
-              <p style={{ fontSize: "100px", color: "black" }}>RJ Varona</p>
+              <p style={{ fontSize: "100px", color: "black" }}>Spencer King</p>
             </animated.div>
           </div>
         </Parallax>

@@ -33,7 +33,7 @@ class App extends React.Component {
                 About
               </Nav.Link>
               <Nav.Link href="#link">Projects</Nav.Link>
-              <Nav.Link href="#link">Food</Nav.Link>
+             
               <Nav.Link href="#link">Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>

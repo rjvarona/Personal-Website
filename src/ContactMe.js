@@ -50,10 +50,9 @@ class App extends React.Component {
                 animateOnce="true"
               >
                 <p class="aboutMe">
-                  My name is RJ Varona, and I recently graduated from Southern
-                  Adventist University with a b.s. in Computer Science, and I
-                  hope to grow as a developer. So feel free to contact me about
-                  any opportunities <span>😊</span>.
+                  My name is Spencer King.  I am currently working on my major in Informatics at Indiana University. 
+                  I am always looking for new people to work with and meet in the 
+                  spatial computing realm. Contact me!<span></span>.
                 </p>
               </ScrollAnimation>
             </Col>

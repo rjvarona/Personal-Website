@@ -30,7 +30,7 @@ function App() {
         <Row>
           <Col md={12} style={{ textAlign: "center" }}>
             <ScrollAnimation animateIn="pulse" delay={500} animateOnce="true">
-              <h1 class="notableProjects">Notable Projects</h1>
+              <h1 class="notableProjects">My Personal Projects</h1>
               <br />
             </ScrollAnimation>
           </Col>
@@ -51,11 +51,10 @@ function App() {
                   style={{ backgroundColor: "black" }}
                   onClick={() => updateBoard("memeboard", false)}
                 >
-                  <h1 style={{ color: "white" }}> Meme Soundboard</h1>
+                  <h1 style={{ color: "white" }}> Forest Walk</h1>
                   <p style={{ color: "white" }}>
-                    Developed a multi-connect soundboard using WPF Forms and
-                    implemented my own http server that connected multiple
-                    soundboards to play memes across clients asynchronously.
+                    Developed my first VR environment. 
+
                   </p>
                 </p>
               </div>
